@@ -1,4 +1,4 @@
-<h1 align="center">Git Out Of Hours</h1>
+<h1 align="center">Proxy Host</h1>
 
 
 > Seamlessly proxy local websites to view across other devices on same network
