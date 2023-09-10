@@ -23,7 +23,7 @@ const newProjectPrompt = [
     {
         type: 'input',
         name: 'url',
-        message: 'What\'s the projects URL?',
+        message: 'What is the projects URL?',
         validate(input) {
             const regexStr = /^https:\/\//g;
             if (regexStr.exec(input) !== null) {
@@ -86,7 +86,7 @@ const newProjectPrompt = [
                 value: false,
             }
         ],
-        default: true,
+        default: false,
     },
     {
         type: 'confirm',

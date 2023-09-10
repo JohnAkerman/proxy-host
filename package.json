@@ -6,6 +6,7 @@
     "bin": {
         "proxy-host": "./bin/proxy-host.js"
     },
+    "repository": "https://github.com/JohnAkerman/proxy-host",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -14,11 +15,12 @@
         "src"
     ],
     "author": "John Akerman",
-    "license": "ISC",
+    "license": "MIT",
     "dependencies": {
         "browser-sync": "^2.29.3",
         "inquirer": "^9.2.11",
         "qrcode-terminal": "^0.12.0"
     },
-    "type": "module"
+    "type": "module",
+    "keywords": ["proxy", "localhost", "device", "testing", "tunnel"]
 }
