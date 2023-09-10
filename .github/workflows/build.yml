@@ -18,4 +18,4 @@ jobs:
       - name: Install package as local npm-package for testing
         run: npm link
       - name: Run tests
-        run: proxy-host -v
+        run: npm run test

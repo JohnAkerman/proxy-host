@@ -36,7 +36,6 @@ function runBinaryCaptureOutput(args, conditionMet, done) {
     });
 
     child.on('close', function (exitCode) {
-        console.log("Child closed with code: " + exitCode);
         done();
     });
 }
