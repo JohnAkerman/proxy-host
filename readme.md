@@ -5,6 +5,7 @@
 
 <p align="center">
 <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/JohnAkerman/proxy-host">
+<a href="https://github.com/JohnAkerman/proxy-host/blob/master/LICENSE"><img src="https://img.shields.io/github/license/JohnAkerman/proxy-host.svg" alt="GitHub license"></a>
   <a href="https://snyk.io/test/github/JohnAkerman/proxy-host"><img src="https://snyk.io/test/github/JohnAkerman/proxy-host/badge.svg" alt="Known Vulnerabilities" data-canonical-src="https://snyk.io/test/github/JohnAkerman/proxy-host" style="max-width:100%;"></a>
 <img src="https://img.shields.io/github/languages/top/JohnAkerman/proxy-host" alt="Top Language" />
 </p>
