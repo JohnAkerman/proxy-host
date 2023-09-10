@@ -6,7 +6,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-
 const handleUserInput = (input) => {
     if (input === '-h' || input === '--help') {
         showHelp();
@@ -50,7 +49,9 @@ const showVersion = () => {
 }
 
 
-if (process.stdin.isTTY) {
+if (process.argv.length > 1) {
     const input = process.argv[2];
     handleUserInput(input);
+} else {
+    console.log("huh how did you get here");
 }
