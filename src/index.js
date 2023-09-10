@@ -16,7 +16,7 @@ import { saveProjectData, getProjectData } from './storage.js';
 const BOLD_CMD_START_CHARS = "\u001B[1m";
 const BOLD_CMD_END_CHARS = "\u001B[22m";
 
-const runStartPrompt = () => {
+const run = () => {
     inquirer.prompt(existingProjectPrompt).then(answers => {
         if (answers.existingProject === true) {
             const existingProjects = getProjectData();
@@ -112,4 +112,6 @@ const runProject = (project) => {
     });
 }
 
-runStartPrompt()
+export {
+    run,
+}
