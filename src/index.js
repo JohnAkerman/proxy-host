@@ -11,7 +11,7 @@ import {
 
 import { config } from './config.js';
 
-import { saveProjectData, getProjectData } from './storage.js';
+import { saveProjectData, getProjectData, getCustomFileOverrides } from './storage.js';
 
 const BOLD_CMD_START_CHARS = "\u001B[1m";
 const BOLD_CMD_END_CHARS = "\u001B[22m";
@@ -91,6 +91,31 @@ const runProject = (project) => {
     };
 
     // If the project is using local file overrides
+    if (project.overrides) {
+        launchOpts.snippetOptions = {
+            rule: {
+                match: /<\/head>/i,
+                fn: function (snippet, match) {
+                    let customStr = '';
+                    const customCss = getCustomFileOverrides('custom.css');
+                    if (customCss != null) {
+                        customStr += `<style data-proxyhost-injected>${customCss}</style>`;
+                    }
+
+                    const customJs = getCustomFileOverrides('custom.js');
+                    if (customJs != null) {
+                        customStr += `<script data-proxyhost-injected>${customJs}</script>`;
+                    }
+
+                    if (customStr != null) {
+                        return customStr + snippet + match;
+                    } else return null;
+                }
+            }
+        }
+    }
+
+
     // Local overrides here
     browserSync.create().init(launchOpts, (err, instance) => {
         const localUrl = instance.options.getIn(['urls', 'local']);
