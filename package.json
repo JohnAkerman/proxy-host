@@ -6,7 +6,11 @@
     "bin": {
         "proxy-host": "./bin/proxy-host.js"
     },
-    "repository": "https://github.com/JohnAkerman/proxy-host",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JohnAkerman/proxy-host"
+    },
+    "bugs": "https://github.com/JohnAkerman/proxy-host/issues",
     "scripts": {
         "test": "mocha --recursive test/specs --timeout 10000 --bail --exit"
     },
