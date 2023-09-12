@@ -1,6 +1,6 @@
 {
     "name": "proxy-host",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "Seamlessly proxy local websites to view across other devices",
     "main": "src/index.js",
     "bin": {
